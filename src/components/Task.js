@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
@@ -27,4 +28,20 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
       </div>
     </div>
   );
+}
+
+Task.propTypes ={
+  //Taskコンポーネントのcompositon;組成を記述する
+  task: PropTypes.shape({
+    //taskのID
+    id: PropTypes.string.isRequired,
+    //taskのtitle
+    title: PropTypes.string.isRequired,
+    //taskの現在の状態state
+    state: PropTypes.string.isRequired,
+  }),
+  //Event to change the task to archived
+  onArchiveTask: PropTypes.func,
+  //Event to change the task to pinned
+  onPinTask: PropTypes.func,
 }
