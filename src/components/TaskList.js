@@ -29,7 +29,8 @@ export default function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
       </div>
     );
   }
-  if (tasks.length === 0) {
+  var length = tasks.length;
+  if (length === 0) {
     return (
       <div className="list-items">
         <div className="wrapper-message">
