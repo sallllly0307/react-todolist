@@ -1,8 +1,11 @@
 //シンプルなredux store/actions/reducerを作る
 import { createStore } from 'redux';
 
-// The actions are the "names" of the changes that can happen to the store
+// "actions" は、ストアに発生する可能性のある変更の「名前」
 export const actions = {
     ARCHIVE_TASK: 'ARCHIVE_TASK',
     PIN_TASK: 'PIN_TASK',
   };
+//アクションを実行するために必要なデータとアクションをバンドルする
+export const archiveTask = id => ({ type: actions.ARCHIVE_TASK, id });
+export const pinTask = id => ({ type: actions.PIN_TASK, id });
