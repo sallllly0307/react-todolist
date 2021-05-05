@@ -22,7 +22,7 @@ function taskStateReducer(taskState) {
       };
     };
   }
-  // The reducer describes how the contents of the store change for each action
+  // reducer は、アクションごとにコンテンツがどのように変化するかを記述してくれる
 export const reducer = (state, action) => {
     switch (action.type) {
       case actions.ARCHIVE_TASK:
@@ -33,3 +33,13 @@ export const reducer = (state, action) => {
         return state;
     }
   };
+
+// アプリが読み込まれたときの初期状態
+// 通常サーバーからfetchする（らしい）
+const defaultTasks = [
+    { id: '1', title: 'Something', state: 'TASK_INBOX' },
+    { id: '2', title: 'Something more', state: 'TASK_INBOX' },
+    { id: '3', title: 'Something else', state: 'TASK_INBOX' },
+    { id: '4', title: 'Something again', state: 'TASK_INBOX' },
+  ];
+  
