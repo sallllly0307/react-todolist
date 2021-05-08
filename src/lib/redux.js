@@ -42,4 +42,5 @@ const defaultTasks = [
     { id: '3', title: 'Something else', state: 'TASK_INBOX' },
     { id: '4', title: 'Something again', state: 'TASK_INBOX' },
   ];
-  
+  // 構成されたredux store をエキスポートする
+export default createStore(reducer, { tasks: defaultTasks });
