@@ -73,6 +73,7 @@ TaskList.defaultProps = {
 }
 */
 }
+
 PureTaskList.propTypes = {
   /** ロード状態かどうかを確認する */
   loading: PropTypes.bool,
@@ -82,4 +83,8 @@ PureTaskList.propTypes = {
   onPinTask: PropTypes.func.isRequired,
   /** タスクをアーカイブに変更するイベント */
   onArchiveTask: PropTypes.func.isRequired,
+};
+
+PureTaskList.defaultProps = {
+  loading: false,
 };
