@@ -13,8 +13,8 @@ const Template = args => <TaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  // Shaping the stories through args composition.
-  // The data was inherited from the Default story in task.stories.js.
+  // 引数(arg)の構成から Story を形成する。
+  // データは、task.stories.jsのDefault Story から継承したもの。
   tasks: [
     { ...TaskStories.Default.args.task, id: '1', title: 'Task 1' },
     { ...TaskStories.Default.args.task, id: '2', title: 'Task 2' },
@@ -27,8 +27,8 @@ Default.args = {
 
 export const WithPinnedTasks = Template.bind({});
 WithPinnedTasks.args = {
-  // Shaping the stories through args composition.
-  // Inherited data coming from the Default story.
+  // 引数(arg)の構成から Story を形成する。
+  // Default Story からの継承データ
   tasks: [
     ...Default.args.tasks.slice(0, 5),
     { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
@@ -43,8 +43,8 @@ Loading.args = {
 
 export const Empty = Template.bind({});
 Empty.args = {
-  // Shaping the stories through args composition.
-  // Inherited data coming from the Loading story.
+  // 引数(arg)の構成からStoryを形成する。
+  // Loading story からの継承データ
   ...Loading.args,
   loading: false,
 };
